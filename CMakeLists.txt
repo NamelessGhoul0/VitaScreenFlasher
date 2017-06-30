@@ -11,7 +11,7 @@ endif()
 project(VitaScreenFlasher)
 include("${VITASDK}/share/vita.cmake" REQUIRED)
 
-set(VITA_APP_NAME "VitaScreenFlasher")
+set(VITA_APP_NAME "ScreenFlasher")
 set(VITA_TITLEID  "SCRENFLSH")
 set(VITA_VERSION  "01.10")
 
@@ -28,7 +28,6 @@ link_directories(
 
 add_executable(VitaScreenFlasher
   src/main.c
-  src/warning.c
 )
 
 target_link_libraries(VitaScreenFlasher
@@ -39,8 +38,6 @@ target_link_libraries(VitaScreenFlasher
   SceCtrl_stub
   ScePgf_stub
   SceCommonDialog_stub
-  freetype
-  png
   z
   m
 )
